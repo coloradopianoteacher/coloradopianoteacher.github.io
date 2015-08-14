@@ -1,0 +1,287 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+/* These override some default tag styles so that we have more pixel control */
+html, body {
+	height: 100%;
+	padding: 0;
+}
+BODY {
+	margin: 0px;
+	background-color: #718b93;
+	background-repeat: repeat-y;
+	font-family: Trebuchet MS, Sans-Serif;
+}
+TABLE, TR, TD {
+	border-collapse: collapse;
+	vertical-align: top;
+	padding: 0px;
+	margin: 0px;
+}
+IMG {
+	border: 0px;
+}
+
+/* Link Colors */
+A {
+	text-decoration: none;
+	font-weight: bold;
+}
+A:link {
+	color: #718b93;
+}
+A:visited {
+	color: #718b93;
+}
+A:hover {
+	color: #718b93;
+	text-decoration: underline;
+}
+A:active {
+	color: #718b93;
+}
+
+/* These are for the main parts of the table */
+#main {
+	width: 780px;
+	height: 100%;
+	-moz-box-shadow: 6px 0px 5px rgba(0, 0, 0, .5);
+	-webkit-box-shadow: 6px 0px 5px rgba(0, 0, 0, .5);
+	box-shadow: 6px 0px 5px rgba(0, 0, 0, .5);
+}
+#sidebar {
+	background-image: url(sidebar_keys_sprite.png);
+	background-repeat: repeat-y;
+	width: 200px;
+}
+#sidebar-nav {
+	top: 176px;
+	position: absolute;
+}
+#sidebar-nav IMG {
+	display: block;
+}
+#content {
+	width: 580px;
+	background-color: white;
+}
+#content #copy {
+	text-align: justify;
+	padding: 1.5em;
+	padding-top: 0;
+	line-height: 1.3em;
+}
+#header {
+	text-align: center;
+	margin: 20px;
+	color: black;
+}
+#header H1, H2 {
+	font-variant: small-caps;
+	font-family: Garamond, Georgia, Serif;
+}
+#location {
+	margin: 0 1.5em;
+	border-bottom: 2px solid #95aad3;
+	color: #7181a0;
+	font-weight: bold;
+	margin-bottom: 35px;
+}
+#background {
+}
+A.navkey {
+	width: 200px;
+	height: 44px;
+	display: block;
+	font-family: Trebuchet MS, Sans-Serif;
+	font-size: 120%;
+	padding-left: 50px;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	line-height: 44px;
+}
+A.navkey {
+	width: 200px;
+	height: 44px;
+}
+A.navkey {
+	text-decoration: none;
+	font-weight: normal;
+	
+	.fa {
+	 display: none;
+	}
+}
+A.navkey:link, A.navkey:visited, A.navkey:hover, A.navkey:active {
+	color: black;
+	text-decoration: none;
+}
+html>body .navkey {
+	width: 150px;
+	height: 44px;
+	background-image: url(sidebar_keys_sprite.png);
+}
+html>body .navkey:hover {
+	text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.nav ul li {
+    margin: 0;
+	padding: 0;
+	border: 0;	
+}
+
+/* These are for the key letter classes */
+A.A, A.D, A.G {
+	background-position: 0px -44px;
+}
+A.A:hover, A.D:hover, A.G:hover {
+	background-position: 200px -44px;
+}
+A.B, A.E {
+	background-position: 0px 0px;
+}
+A.B:hover, A.E:hover {
+	background-position: 200px 0px;
+}
+A.C, A.F {
+	background-position: 0px -88px;
+}
+A.C:hover, A.F:hover {
+	background-position: 200px -88px;
+}
+
+#wrapper {
+	height: 100%;
+}
+
+#wrapper #sidebar #nav-menu {
+   display: none;
+}
+
+#nav-menu:not( .mm-menu ) {
+   display: none;
+}
+
+.header {
+	margin-top: 35px;
+	font-weight: bold;
+}
+.practice {
+	margin-bottom: 15px;
+}
+.prac_header {
+	margin-top: 15px;
+	margin-bottom: 0px;
+	font-weight: bold;
+}
+.lessonNumList {
+	padding-left: 22px;
+}
+.lessonList {
+	list-style-type: none;
+	padding: 0px;
+}
+.hr {
+	height: 1px;
+	color: black;
+	margin-bottom: 15px;
+}
+.faq {
+	margin-bottom: 0px;
+}
+.imageleft {
+	float: left;
+	margin: 5 0 2 1em;
+	border: 2px solid black;
+}
+.imageright {
+	float: right;
+	margin: 5 0 2 1em;
+	border: 2px solid black;
+}
+.imagerightMargin {
+	float: right;
+	margin: 18 0 2 1em;
+	border: 2px solid black;
+}
+.imageleftMargin {
+	float: left;
+	margin: 2 0 18 1em;
+	border: 2px solid black;
+}
+.imageCenter {
+	border: 2px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	display: block;
+}
+
+#facebook {
+	float: right;
+	display: block;
+	padding: 5px;
+	margin-top: -10px;
+}
+#facebook iframe {
+	width: 142px;
+}
+#sidebar ul, #sidebar li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+@media screen and (max-width:780px) {
+	#main {
+		width: 100%;
+		min-width: 320px;
+	}
+	#content {
+		width: 100%;
+		font-size: 90%;
+		img.imageright, img.imageleft, img.imagerightMargin, img.imageleftMargin {
+			max-width: 30%;
+		}
+		img.imageCenter, iframe, img {
+			max-width: 300px;
+		}
+	}
+	#sidebar {
+		width: 0px;
+		display: none;
+	}
+	a#menu-button {
+		display: block !important;
+		position: absolute;
+		left: 10px;
+		top: 10px;
+	}
+
+	#nav-menu {	    
+		padding: 0;
+
+		.fa {
+	      display: inline-block;	     
+	    }
+
+        a {
+         color: darken(#728c94, 20%) !important;
+         font-size: 120%;
+        }
+		ul {
+		  padding: 0;
+		}
+	}
+}
