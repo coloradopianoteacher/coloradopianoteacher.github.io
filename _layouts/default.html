@@ -73,11 +73,13 @@ function openMenu() {
     jQuery("#content").click(function(e) {
         closeMenu();
     })
+    jQuery(window).scroll(function () { closeMenu(); })
 }
 
 function closeMenu() {
     jQuery("#sidebar").removeClass("shown");
     jQuery("#content").unbind("click");
+    jQuery(window).unbind("scroll");
 }
 
    jQuery(document).ready(function() {
