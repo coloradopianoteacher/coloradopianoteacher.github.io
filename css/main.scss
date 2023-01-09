@@ -3,16 +3,27 @@
 ---
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Raleway:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap');
+
 /* These override some default tag styles so that we have more pixel control */
+$backgroundColor: #050505;
+$bodyBackgroundColor: #EBEBEB;
+$highlightColor: #221F3B;
+$linkColor: #6F4A8E;
+
+$bodyFont: normal normal 400 1em 'Raleway', sans-serif;
+$menuFont: 'Raleway', sans-serif;
+$headerFont: normal normal 300 1em 'Della Respira', serif;
+
 html, body {
 	height: 100%;
 	padding: 0;
 }
 BODY {
 	margin: 0px;
-	background-color: #718b93;
-	background-repeat: repeat-y;
-	font-family: Trebuchet MS, Sans-Serif;
+	background-color: $backgroundColor;
+	font-size: 20px;
+	font: $bodyFont;
 }
 TABLE, TR, TD {
 	border-collapse: collapse;
@@ -30,26 +41,24 @@ A {
 	font-weight: bold;
 }
 A:link {
-	color: #718b93;
+	color: $linkColor;
 }
 A:visited {
-	color: #718b93;
+	color: $linkColor;
 }
 A:hover {
-	color: #718b93;
+	color: $linkColor;
 	text-decoration: underline;
 }
 A:active {
-	color: #718b93;
+	color: $linkColor;
 }
 
 /* These are for the main parts of the table */
 #main {
-	width: 780px;
+	width: 1010px;
 	height: 100%;
-	-moz-box-shadow: 6px 0px 5px rgba(0, 0, 0, .5);
-	-webkit-box-shadow: 6px 0px 5px rgba(0, 0, 0, .5);
-	box-shadow: 6px 0px 5px rgba(0, 0, 0, .5);
+	margin: auto;
 }
 #sidebar {
 	background-image: url(sidebar_keys_sprite.png);
@@ -57,36 +66,49 @@ A:active {
 	width: 200px;
 }
 #sidebar-nav {
-	top: 176px;
+	top: 131px;
 	position: absolute;
 }
 #sidebar-nav IMG {
 	display: block;
 }
+
 #content {
-	width: 580px;
-	background-color: white;
+	width: 730px;
+	background-color: $bodyBackgroundColor;
+	font-size: 110%;
+	padding: 40px;
+
+	#copy {
+		text-align: justify;
+		padding-top: 0;
+		line-height: 1.5em;
+		font-weight: 300;
+	}
 }
-#content #copy {
-	text-align: justify;
-	padding: 1.5em;
-	padding-top: 0;
-	line-height: 1.3em;
-}
+
 #header {
 	text-align: center;
-	margin: 20px;
 	color: black;
+	font: $headerFont;
+
+	h1 {
+		font-size: 250%;
+	}
+	h2 {
+		font-size: 130%;
+	}
+	h3 {
+		font-size: 110%;
+	}
 }
-#header H1, H2 {
-	font-variant: small-caps;
-	font-family: Garamond, Georgia, Serif;
-}
+
 #location {
-	margin: 0 1.5em;
-	border-bottom: 2px solid #95aad3;
-	color: #7181a0;
+	border-bottom: 1px solid $highlightColor;
+	color: #6F4A8E;
+	font: $headerFont;
 	font-weight: bold;
+	font-size: 130%;
 	margin-bottom: 35px;
 }
 #background {
@@ -95,12 +117,13 @@ A.navkey {
 	width: 200px;
 	height: 44px;
 	display: block;
-	font-family: Trebuchet MS, Sans-Serif;
-	font-size: 120%;
+	font-family: $menuFont;
+	font-size: 110%;
 	padding-left: 50px;
 	text-align: center;
 	text-decoration: none;
 	color: black;
+	font-weight: 400;
 	line-height: 44px;
 }
 A.navkey {
@@ -109,7 +132,6 @@ A.navkey {
 }
 A.navkey {
 	text-decoration: none;
-	font-weight: normal;
 	
 	.fa {
 	 display: none;
@@ -119,13 +141,15 @@ A.navkey:link, A.navkey:visited, A.navkey:hover, A.navkey:active {
 	color: black;
 	text-decoration: none;
 }
+
 html>body .navkey {
 	width: 150px;
 	height: 44px;
 	background-image: url(sidebar_keys_sprite.png);
 }
 html>body .navkey:hover {
-	text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.2);
+	//text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.2);
+	color: $linkColor;
 }
 
 .nav ul {
@@ -175,7 +199,7 @@ A.C:hover, A.F:hover {
 
 .header {
 	margin-top: 35px;
-	font-weight: bold;
+	font: $headerFont;
 }
 .practice {
 	margin-bottom: 15px;
@@ -208,29 +232,29 @@ A.C:hover, A.F:hover {
 }
 .imageleft {
 	float: left;
-	margin: 5 0 2 1em;
-	border: 2px solid black;
+	margin: 5 0 20px 40px;
+	border: 1px solid $highlightColor;
 }
 .imageright {
 	float: right;
-	margin: 5 0 2 1em;
-	border: 2px solid black;
+	margin: 5 0 20px 40px;
+	border: 1px solid $highlightColor;
 }
 .imagerightMargin {
 	float: right;
 	margin: 18 0 2 1em;
-	border: 2px solid black;
+	border: 1px solid $highlightColor;
 }
 .imageleftMargin {
 	float: left;
 	margin: 2 0 18 1em;
-	border: 2px solid black;
+	border: 1px solid $highlightColor;
 }
 .imageCenter {
-	border: 2px solid black;
+	border: 1px solid $highlightColor;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	display: block;
 }
 
@@ -249,45 +273,65 @@ A.C:hover, A.F:hover {
 	border: 0;
 }
 
-@media screen and (max-width:780px) {
+
+@media only screen and (max-width: 1010px) {
+	#main {
+		width: 786px;
+	}
+
+	#content {
+		width: 504px;
+		font-size: 100%;
+	}
+}
+
+@media only screen and (max-width: 786px) {
+	#sidebar {
+		position: absolute;
+		height: 100%;
+		left:0;
+		display: none;
+		box-shadow: 2px 0 5px rgba(0, 0, 0, .5);
+
+		&.shown {
+			display: block;
+			visibility: visible;
+		}
+	}
+
+	#menu-button {
+		position: absolute;
+		display: block !important;
+		left:5px;
+		top:5px;
+		visibility: visible;
+	}
+
 	#main {
 		width: 100%;
-		min-width: 320px;
 	}
+
 	#content {
 		width: 100%;
-		font-size: 90%;
-		img.imageright, img.imageleft, img.imagerightMargin, img.imageleftMargin {
-			max-width: 30%;
+
+		.imageleft {
+			float: none;
+			display: block;
+			margin: 1em auto;
+			border: 1px solid $highlightColor;
 		}
-		img.imageCenter, iframe, img {
-			max-width: 300px;
+		.imageright {
+			float: none;
+			display: block;
+			margin: 1em auto;
+			border: 1px solid $highlightColor;
 		}
 	}
-	#sidebar {
-		width: 0px;
-		display: none;
-	}
-	a#menu-button {
-		display: block !important;
-		position: absolute;
-		left: 10px;
-		top: 10px;
-	}
+}
 
-	#nav-menu {	    
-		padding: 0;
+@media only screen and (max-width: 480px) {
 
-		.fa {
-	      display: inline-block;	     
-	    }
-
-        a {
-         color: darken(#728c94, 20%) !important;
-         font-size: 120%;
-        }
-		ul {
-		  padding: 0;
-		}
+	#content {
+		font-size:85%;
 	}
 }
