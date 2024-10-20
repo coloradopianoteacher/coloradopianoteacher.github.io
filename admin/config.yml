@@ -3,3 +3,20 @@ backend:
   repo: coloradopianoteacher/coloradopianoteacher.github.io # Path to your GitHub repository
   # optional, defaults to master
   # branch: main
+
+  
+media_folder: 'assets'
+public_folder: ""
+
+collections:
+  - name: 'pages'
+    label: 'Pages'
+    label_singular: "Page"
+    folder: '/'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'text'}
