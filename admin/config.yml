@@ -10,14 +10,14 @@ public_folder: ""
 
 collections:
 - label: "Pages"
-    name: "pages"
-    files:
-      - label: "Schedule Page"
-        name: "about"
-        file: "schedule.html"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - label: 'Code'
-            name: 'code'
-            widget: 'code'
-            default_language: 'html'
+  name: "pages"
+  files:
+    - label: "Schedule Page"
+      name: "about"
+      file: "schedule.html"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - label: 'Code'
+          name: 'code'
+          widget: 'code'
+          default_language: 'html'
