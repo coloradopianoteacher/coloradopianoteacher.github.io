@@ -19,5 +19,5 @@ collections:
         - {label: Title, name: title, widget: string}
         - label: 'Body'
           name: 'body'
-          widget: 'code'
+          widget: 'text'
           default_language: 'html'
