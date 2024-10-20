@@ -9,14 +9,15 @@ media_folder: 'assets'
 public_folder: ""
 
 collections:
-  - name: 'pages'
-    label: 'Pages'
-    label_singular: "Page"
-    folder: '/'
-    create: true
-    slug: '{{slug}}'
-    editor:
-      preview: true
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'text'}
+- label: "Pages"
+    name: "pages"
+    files:
+      - label: "Schedule Page"
+        name: "about"
+        file: "schedule.html"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - label: 'Code'
+            name: 'code'
+            widget: 'code'
+            default_language: 'html'
