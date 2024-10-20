@@ -13,6 +13,9 @@
 <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" />
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/css/main.css" />
+{% if page.title == "Home" %}
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+{% endif %}
 <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="{% if page.description != null %}{{page.description}}{% else %}{{site.description}}{% endif %}" />
   <meta name="keywords" content="julia hilton, js piano studio, piano, lessons, music, tutor, colorado piano, piano teacher, music lessons, broomfield piano, thornton piano, jazz piano, cfmc, classical piano, westminster piano, denver piano, denver music" />
@@ -88,6 +91,20 @@ function closeMenu() {
       });
    });
 </script>
+
+{% if page.title == "Home" %}
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+{% endif %}
 
 </body>
 </html>
