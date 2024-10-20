@@ -17,7 +17,7 @@ collections:
       file: "schedule.html"
       fields:
         - {label: Title, name: title, widget: string}
-        - label: 'Code'
-          name: 'code'
+        - label: 'Body'
+          name: 'body'
           widget: 'code'
           default_language: 'html'
