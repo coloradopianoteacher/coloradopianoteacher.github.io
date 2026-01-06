@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Section 2: Main Section (Hero) */
 .hero-section {
     position: relative;
-    height: calc(100vh - 92px);
+    min-height: calc(100vh - 92px);
     display: flex;
     align-items: center;
     justify-content: center;
