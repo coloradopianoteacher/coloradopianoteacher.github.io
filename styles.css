@@ -897,6 +897,10 @@ h1, h2, h3, h4, h5, h6 {
     .section-title {
         font-size: 2rem;
     }
+
+    .spacer-section {
+        background-attachment: scroll;
+    }
 }
 
 @media (max-width: 480px) {
