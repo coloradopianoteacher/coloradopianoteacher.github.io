@@ -12,6 +12,7 @@
     font-family: 'FoglihtenNo07';
     src: url('webfont/FoglihtenNo07.woff2') format('woff2'),
          url('webfont/FoglihtenNo07.woff') format('woff');
+    font-display: swap;
 }
 
 /* Reset and Base Styles */
