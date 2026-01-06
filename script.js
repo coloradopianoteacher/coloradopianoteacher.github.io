@@ -126,22 +126,6 @@ $(document).ready(function() {
         }
     });
 
-    // Check if page loaded with #thanks anchor and show thank you message
-    if (window.location.hash === '#thanks') {
-        // Scroll to contact section
-        const contactSection = $('#contact');
-        if (contactSection.length) {
-            $('html, body').animate({
-                scrollTop: contactSection.offset().top - 80
-            }, 600);
-            
-            // Show thank you popup after a brief delay
-            setTimeout(function() {
-                alert('Thank you for your message! We will get back to you soon.');
-            }, 700);
-        }
-    }
-
     // Contact form submission with web3forms
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
@@ -166,8 +150,11 @@ $(document).ready(function() {
                 const data = await response.json();
 
                 if (response.ok) {
-                    // Redirect to thank you page
-                    window.location.href = window.location.origin + window.location.pathname + '#thanks';
+                    // Show success message and reset form
+                    alert('Thank you for your message! We will get back to you soon.');
+                    contactForm.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
                 } else {
                     alert("Error: " + data.message);
                     submitBtn.innerHTML = originalText;
