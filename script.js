@@ -151,7 +151,6 @@ $(document).ready(function() {
             e.preventDefault();
 
             const formData = new FormData(contactForm);
-            formData.append("access_key", "f5c6767e-9934-4c79-9cfa-617724984dc5");
 
             const originalText = submitBtn.innerHTML;
 
