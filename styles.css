@@ -532,7 +532,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Spacer Section */
 .spacer-section {
     height: 300px;
-    background-image: url('img/studio-gray.jpg');
+    background-image: url('img/studio-gray-c.jpg');
     background-size: cover;
     background-position: left center;
     background-attachment: fixed;
