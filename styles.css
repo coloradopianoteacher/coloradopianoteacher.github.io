@@ -597,6 +597,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.1rem;
 }
 
+.pricing-table th:last-child {
+    text-align: right;
+}
+
 .pricing-table tbody tr {
     border-bottom: 1px solid var(--light-text);
 }
@@ -624,9 +628,9 @@ h1, h2, h3, h4, h5, h6 {
     text-align: right;
 }
 
-.pricing-note {
+.pricing-info .pricing-note {
     margin-top: 1.5rem;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: var(--black-text);
     font-style: italic;
     text-align: left;
