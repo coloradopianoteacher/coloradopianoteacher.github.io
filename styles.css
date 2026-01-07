@@ -223,6 +223,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+    padding-bottom: 5rem;
     text-align: left;
 }
 
@@ -919,6 +920,10 @@ h1, h2, h3, h4, h5, h6 {
 
     .highlight-item:last-child {
         border-bottom: none;
+    }
+
+    .hero-content {
+        padding-bottom: 5rem;
     }
 
     .hero-text {
