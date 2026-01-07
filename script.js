@@ -55,7 +55,7 @@ $(document).ready(function() {
         if (isUserOnTestimonials) {
             autoAdvanceInterval = setInterval(function() {
                 swiperInstance.slideNext();
-            }, 5000); // Advance every 5 seconds
+            }, 10000); // Advance every 10 seconds
         }
     }
 
