@@ -350,25 +350,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-btn {
-    background-color: transparent;
-    color: var(--gold-highlight);
+    background-color: var(--gold-highlight);
+    color: var(--black-text);
     border: none;
-    width: 35px;
-    height: 35px;
-    font-size: 1.8rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
     cursor: pointer;
     z-index: 10;
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     margin-top: 2rem;
     font-weight: 300;
+    border-radius: 50%;
 }
 
 .carousel-btn:hover {
-    color: var(--light-highlight);
+    background-color: var(--light-highlight);
+    color: var(--black-text);
 }
 
 .testimonial {
@@ -502,9 +504,17 @@ h1, h2, h3, h4, h5, h6 {
     right: 1.5rem;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1.2rem;
-    color: var(--gold-highlight);
-    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
+    color: var(--black-text);
+    background-color: var(--gold-highlight);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
 .faq-item.active .faq-question::after {
@@ -866,9 +876,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .carousel-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 2rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
         margin-top: 0;
         align-self: center;
     }
@@ -931,9 +941,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .carousel-btn {
-        width: 35px;
-        height: 35px;
-        font-size: 1.8rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
         margin-top: 0;
         align-self: center;
     }
