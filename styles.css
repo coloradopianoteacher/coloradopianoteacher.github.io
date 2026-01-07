@@ -768,6 +768,20 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--black-text);
 }
 
+/* Footer: Copyright */
+.copyright-footer {
+    background-color: var(--black-text);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.copyright-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-family: 'Raleway', sans-serif;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-container {

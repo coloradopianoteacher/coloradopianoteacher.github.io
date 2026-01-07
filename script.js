@@ -1,4 +1,11 @@
 $(document).ready(function() {
+    // Update copyright year
+    const currentYear = new Date().getFullYear();
+    const yearElement = document.getElementById('currentYear');
+    if (yearElement) {
+        yearElement.textContent = currentYear;
+    }
+
     // Mobile menu toggle
     $('.menu-toggle').on('click', function() {
         $('.nav-links').toggleClass('active');
