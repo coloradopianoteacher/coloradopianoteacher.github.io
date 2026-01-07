@@ -72,6 +72,12 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0;
 }
 
+.logo a:focus-visible {
+    outline: 3px solid var(--gold-highlight);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
 .logo-img {
     height: 60px;
     width: auto;
@@ -91,6 +97,12 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     width: 1.5rem;
     height: 1.5rem;
+}
+
+.menu-toggle:focus-visible {
+    outline: 3px solid var(--gold-highlight);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 .menu-toggle .menu-icon,
@@ -162,6 +174,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-link:hover {
     color: var(--light-highlight);
+}
+
+.nav-link:focus-visible {
+    outline: 3px solid var(--gold-highlight);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 /* Section 2: Main Section (Hero) */
@@ -263,6 +281,37 @@ h1, h2, h3, h4, h5, h6 {
 
 .youtube-link:hover {
     background-color: var(--light-highlight);
+}
+
+.scroll-down-btn {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--gold-highlight);
+    color: var(--black-text);
+    border: none;
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    z-index: 4;
+    transition: background-color 0.3s ease;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.scroll-down-btn:hover {
+    background-color: var(--light-highlight);
+    color: var(--black-text);
+}
+
+.scroll-down-btn:focus-visible {
+    outline: 3px solid var(--base-color);
+    outline-offset: 2px;
 }
 
 /* Section 3: Highlights */
@@ -371,6 +420,11 @@ h1, h2, h3, h4, h5, h6 {
 .carousel-btn:hover {
     background-color: var(--light-highlight);
     color: var(--black-text);
+}
+
+.carousel-btn:focus-visible {
+    outline: 3px solid var(--base-color);
+    outline-offset: 2px;
 }
 
 .testimonial {
@@ -494,6 +548,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .faq-question:hover {
     background-color: var(--light-highlight);
+}
+
+.faq-question:focus-visible {
+    outline: 3px solid var(--gold-highlight);
+    outline-offset: -3px;
 }
 
 .faq-question::after {
@@ -672,6 +731,11 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--black-text);
 }
 
+.pricing-link:focus-visible {
+    outline: 3px solid var(--base-color);
+    outline-offset: 2px;
+}
+
 /* Section 8: Contact */
 .contact-section {
     background-color: var(--base-color);
@@ -717,6 +781,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: inherit;
     background-color: white;
     color: var(--black-text);
+}
+
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+    outline: 3px solid var(--gold-highlight);
+    outline-offset: -1px;
+    border-color: var(--gold-highlight);
 }
 
 .form-group textarea {
@@ -779,6 +850,11 @@ h1, h2, h3, h4, h5, h6 {
 .submit-btn:hover {
     background-color: var(--light-highlight);
     color: var(--black-text);
+}
+
+.submit-btn:focus-visible {
+    outline: 3px solid var(--base-color);
+    outline-offset: 2px;
 }
 
 /* Footer: Copyright */
