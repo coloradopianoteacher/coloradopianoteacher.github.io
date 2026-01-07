@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -39,17 +41,64 @@
             display: block;
         }
 
+        .redirect-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
         .redirect-message {
             color: #BEB2C8;
             font-size: 1.2rem;
             text-align: center;
+        }
+
+        .spinner {
+            font-size: 1.2rem;
+            color: #BEB2C8;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .redirect-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background-color: #e2c044;
+            color: #02040F;
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .redirect-link:hover {
+            background-color: #e1D89F;
+            color: #02040F;
         }
     </style>
 </head>
 <body>
     <div class="logo-container">
         <img src="img/logo.png" alt="J.S. Piano Studio" class="logo-img">
-        <p class="redirect-message">Page not found, redirecting...</p>
+        <div class="redirect-container">
+            <p class="redirect-message">Page not found, redirecting...</p>
+            <i class="fas fa-spinner spinner"></i>
+        </div>
+        <a href="index.html" class="redirect-link">Click here if not automatically redirected <i class="fas fa-arrow-right"></i></a>
     </div>
 
     <script>
