@@ -29,7 +29,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'FoglihtenNo07', serif;
+    font-family: 'FoglihtenNo07', 'Trebuchet MS', serif;
     font-variant: small-caps;
     font-weight: 300;
     letter-spacing: 0.06em;
@@ -72,6 +72,12 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0;
 }
 
+.logo a:focus-visible {
+    outline: 3px solid var(--gold-highlight);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
 .logo-img {
     height: 60px;
     width: auto;
@@ -91,6 +97,12 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     width: 1.5rem;
     height: 1.5rem;
+}
+
+.menu-toggle:focus-visible {
+    outline: 3px solid var(--gold-highlight);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 .menu-toggle .menu-icon,
@@ -164,6 +176,12 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--light-highlight);
 }
 
+.nav-link:focus-visible {
+    outline: 3px solid var(--gold-highlight);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
 /* Section 2: Main Section (Hero) */
 .hero-section {
     position: relative;
@@ -180,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('img/background-c.jpg');
+    background-image: url('img/bg-hero.jpg');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -205,6 +223,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+    padding-bottom: 5rem;
     text-align: left;
 }
 
@@ -263,6 +282,37 @@ h1, h2, h3, h4, h5, h6 {
 
 .youtube-link:hover {
     background-color: var(--light-highlight);
+}
+
+.scroll-down-btn {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--gold-highlight);
+    color: var(--black-text);
+    border: none;
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    z-index: 4;
+    transition: background-color 0.3s ease;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.scroll-down-btn:hover {
+    background-color: var(--light-highlight);
+    color: var(--black-text);
+}
+
+.scroll-down-btn:focus-visible {
+    outline: 3px solid var(--base-color);
+    outline-offset: 2px;
 }
 
 /* Section 3: Highlights */
@@ -350,25 +400,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-btn {
-    background-color: transparent;
-    color: var(--gold-highlight);
+    background-color: var(--gold-highlight);
+    color: var(--black-text);
     border: none;
-    width: 35px;
-    height: 35px;
-    font-size: 1.8rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
     cursor: pointer;
     z-index: 10;
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     margin-top: 2rem;
     font-weight: 300;
+    border-radius: 50%;
 }
 
 .carousel-btn:hover {
-    color: var(--light-highlight);
+    background-color: var(--light-highlight);
+    color: var(--black-text);
+}
+
+.carousel-btn:focus-visible {
+    outline: 3px solid var(--base-color);
+    outline-offset: 2px;
 }
 
 .testimonial {
@@ -401,7 +458,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0.8;
     margin-right: 1.5rem;
     margin-top: 0.3rem;
-    opacity: 0.6;
 }
 
 .testimonial cite::before {
@@ -475,7 +531,7 @@ h1, h2, h3, h4, h5, h6 {
 .faq-question {
     width: 100%;
     padding: 1.5rem;
-    padding-right: 3rem;
+    padding-right: 4.5rem;
     background-color: white;
     border: none;
     text-align: left;
@@ -495,6 +551,11 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--light-highlight);
 }
 
+.faq-question:focus-visible {
+    outline: 3px solid var(--gold-highlight);
+    outline-offset: -3px;
+}
+
 .faq-question::after {
     content: "\f067";
     font-family: "Font Awesome 5 Free";
@@ -503,9 +564,17 @@ h1, h2, h3, h4, h5, h6 {
     right: 1.5rem;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1.2rem;
-    color: var(--gold-highlight);
-    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
+    color: var(--black-text);
+    background-color: var(--gold-highlight);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
 .faq-item.active .faq-question::after {
@@ -532,7 +601,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Spacer Section */
 .spacer-section {
     height: 300px;
-    background-image: url('img/studio-gray-c.jpg');
+    background-image: url('img/bg-studio-gray.jpg');
     background-size: cover;
     background-position: left center;
     background-attachment: fixed;
@@ -544,7 +613,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Section 7: Pricing */
 .pricing-section {
     background-color: white;
-    background-image: url('img/playing-c.jpg');
+    background-image: url('img/bg-playing.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -598,6 +667,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.1rem;
 }
 
+.pricing-table th:last-child {
+    text-align: right;
+}
+
 .pricing-table tbody tr {
     border-bottom: 1px solid var(--light-text);
 }
@@ -625,9 +698,9 @@ h1, h2, h3, h4, h5, h6 {
     text-align: right;
 }
 
-.pricing-note {
+.pricing-info .pricing-note {
     margin-top: 1.5rem;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: var(--black-text);
     font-style: italic;
     text-align: left;
@@ -659,10 +732,15 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--black-text);
 }
 
+.pricing-link:focus-visible {
+    outline: 3px solid var(--base-color);
+    outline-offset: 2px;
+}
+
 /* Section 8: Contact */
 .contact-section {
     background-color: var(--base-color);
-    background-image: url('img/christmas-c.jpg');
+    background-image: url('img/bg-christmas.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -704,6 +782,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: inherit;
     background-color: white;
     color: var(--black-text);
+}
+
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+    outline: 3px solid var(--gold-highlight);
+    outline-offset: -1px;
+    border-color: var(--gold-highlight);
 }
 
 .form-group textarea {
@@ -768,6 +853,25 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--black-text);
 }
 
+.submit-btn:focus-visible {
+    outline: 3px solid var(--base-color);
+    outline-offset: 2px;
+}
+
+/* Footer: Copyright */
+.copyright-footer {
+    background-color: var(--black-text);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.copyright-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-family: 'Raleway', sans-serif;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-container {
@@ -818,6 +922,10 @@ h1, h2, h3, h4, h5, h6 {
         border-bottom: none;
     }
 
+    .hero-content {
+        padding-bottom: 5rem;
+    }
+
     .hero-text {
         padding: 2rem 1.5rem;
     }
@@ -849,9 +957,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .carousel-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 2rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
         margin-top: 0;
         align-self: center;
     }
@@ -914,9 +1022,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .carousel-btn {
-        width: 35px;
-        height: 35px;
-        font-size: 1.8rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
         margin-top: 0;
         align-self: center;
     }

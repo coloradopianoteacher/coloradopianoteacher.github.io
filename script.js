@@ -1,4 +1,11 @@
 $(document).ready(function() {
+    // Update copyright year
+    const currentYear = new Date().getFullYear();
+    const yearElement = document.getElementById('currentYear');
+    if (yearElement) {
+        yearElement.textContent = currentYear;
+    }
+
     // Mobile menu toggle
     $('.menu-toggle').on('click', function() {
         $('.nav-links').toggleClass('active');
@@ -48,7 +55,7 @@ $(document).ready(function() {
         if (isUserOnTestimonials) {
             autoAdvanceInterval = setInterval(function() {
                 swiperInstance.slideNext();
-            }, 5000); // Advance every 5 seconds
+            }, 10000); // Advance every 10 seconds
         }
     }
 
@@ -106,12 +113,14 @@ $(document).ready(function() {
         const faqItem = $(this).closest('.faq-item');
         const isActive = faqItem.hasClass('active');
         
-        // Close all FAQ items
+        // Close all FAQ items and set aria-expanded to false
         $('.faq-item').removeClass('active');
+        $('.faq-question').attr('aria-expanded', 'false');
         
         // Open clicked item if it wasn't active
         if (!isActive) {
             faqItem.addClass('active');
+            $(this).attr('aria-expanded', 'true');
         }
     });
 
@@ -122,6 +131,16 @@ $(document).ready(function() {
             e.preventDefault();
             $('html, body').animate({
                 scrollTop: target.offset().top - 80 // Account for sticky navbar
+            }, 600);
+        }
+    });
+
+    // Scroll down button in hero section
+    $('.scroll-down-btn').on('click', function() {
+        const highlightsSection = $('.highlights-section');
+        if (highlightsSection.length) {
+            $('html, body').animate({
+                scrollTop: highlightsSection.offset().top - 80 // Account for sticky navbar
             }, 600);
         }
     });
